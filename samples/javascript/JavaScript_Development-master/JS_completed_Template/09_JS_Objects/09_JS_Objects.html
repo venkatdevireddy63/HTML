@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Objects Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    //creation of objects
+var obj = {};
+console.log(obj);
+
+    //Adding properties to objects
+obj.name = 'john';
+obj.age = 25;
+console.log(obj);
+    //Retrieving properties of objects
+    var emp_name = obj.name;
+    console.log(emp_name)
+
+    //declaring Object Literals
+    var employee = {
+        name : 'rajan',
+        age : 40,
+        designation : 'manager'
+    };
+    console.log(employee);
+
+    //Access existing properties
+    var exist_pro =employee.name;
+    var output = "the existing property value " + exist_pro;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //Access Non Existing Properties
+var non_exist_pro = employee.sal;
+output ="the non existing property value: " + non_exist_pro;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // Usage of Dot and [] notations
+    var car = {
+        name : 'benz',
+        year : 2018,
+        color : 'white'
+    };
+    var car_pro = car["name"];
+    console.log(car_pro);
+
+    // use of [] notation where dot is not used for invalid identifiers
+var book ={
+    name :"you don't know js",
+    author : 'kyle simson',
+    year :2015,
+    1001 : '100 pages'
+};
+var book_prop =book["1001"];
+console.log(book_prop);
+document.getElementById('display').innerHTML = book_prop;
+
+    // use of [] notation for accessing dynamic properties
+var dyn_pro = "author";
+output = book[dyn_pro];
+console.log(output);
+
+    // nested Objects creation
+    var student = {
+        name :'venkat',
+        age :25,
+        course :'engineering',
+        address :{
+            city :'hyderabad',
+            state : 'telangana',
+            country :'India'
+        }
+    };
+
+    //Accessing them using dot notation
+
+    var student_city = student.address.city ;
+    output = "venkat's city is " +student_city;
+    console.log(output);
+
+    //Accessing them using mix of dot and [] notation
+    var student_country = student.address["country"];
+    output = "venkat's country is "+student_country;
+    console.log(output);
+
+    // Add some properties to nested object and access them
+    student.address.street = 'ameerpet';
+    var student_street = student.address.street;
+    output= "venkat's street is " +student_street;
+    console.log(output);
+
+    // === operator demo for objects (if pointing to same location in memory)
+    var employee1 = {
+        name : 'prasanth',
+        age : 25,
+        desg : 'SSE'
+    };
+    var employee2 = employee1;
+    if(employee1=== employee2){
+        output ="both are equal";
+    }
+    else{
+        output = "both are not equal";
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // deleting a property from an object
+    var studentObj = JSON.stringify(student);
+    console.log(studentObj);
+    document.getElementById('display').innerHTML = studentObj;
+
+    delete student.address.street;
+    studentObj = JSON.stringify(student);
+    console.log(studentObj);
+    document.getElementById('display').innerHTML = studentObj;
+
+
+
+
+</script>
+</html>

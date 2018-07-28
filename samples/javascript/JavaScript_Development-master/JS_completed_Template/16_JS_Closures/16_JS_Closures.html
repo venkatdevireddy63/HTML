@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Closures</title>
+    <style>
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin: 10px;
+        }
+        .green{
+            background-color: seagreen;
+        }
+        .blue{
+            background-color: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Closures Example</h2>
+
+    <div class="green">
+        <h1 id="display1"></h1>
+    </div>
+
+    <div class="blue">
+        <h1 id="display2"></h1>
+    </div>
+
+</body>
+<script>
+    // Closures
+    var a =10;
+    function outer() {
+        var b =20;
+        var inner =function () {
+            a++;
+            b++;
+            console.log(a);
+            console.log(b);
+        };
+        return inner();
+    }
+var innerfn1 = outer();
+    innerfn1();
+    var innerfn2 = outer();
+    innerfn2();
+
+//    module pattern
+    function createStudent() {
+       var firstName = 'arjun';
+       var lastName ='reddy';
+        var std ={
+            getFirstName : function () {
+                return firstName;
+            },
+            getLastName : function () {
+                return lastName;
+            },
+            setFirstName : function (fNmae) {
+                firstName= fNmae;
+            },
+            setLastName : function (lNmae) {
+                lastName = lNmae;
+            }
+        };
+        return std;
+    }
+    var student = createStudent();
+    var stdFirstName = student.getFirstname();
+    document.querySelector('#display1').innerHTML = stdFirstName;
+
+</script>
+</html>

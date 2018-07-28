@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Operators</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Operators Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+<script>
+
+    // Assignment operator =
+var a=10;
+var output = "the value of a is" + a;
+console.log(output);
+document.getElementById('display').innerHTML = output;
+
+    // Arithmetic operators + - * /
+
+
+    // Short hand math += , -= , *= , /=
+
+
+    // Conditional operators < , > , <= , >= , !=
+
+
+    // Unary Operator ++ , -- (pre , post)
+
+
+    // Logical operators AND , OR
+
+
+    // String Concatenation Operator
+var strings =1+ "2" +3 +4 +5+"6"+7;
+    output= "the value of strings is:" +strings;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Ternary operator (? :)
+    var myage = 25;
+    output = "";
+    (myage>= 18)? output="your major" :output="your minor";
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Type of operator
+    var xyz;
+    xyz = null;
+    output= "the type of xyz is " + typeof xyz;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+     // == operator
+var a= 10;
+var b= "10";
+output= "";
+if (a==b){
+    output = "both are equal";
+}
+else{
+    output="not eqal"
+}
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+    // === operator
+    var a= 10;
+    var b= "10";
+    output= "";
+    if (a===b){
+        output = "both are equal";
+    }
+    else{
+        output="not eqal"
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+</script>
+</html>

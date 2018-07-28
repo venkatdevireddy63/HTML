@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Functions</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Functions Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    //creation of a simple function with no args and execute a function
+function great() {
+    var output = "good morning";
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+}
+great();
+
+    //creation of a simple function with args
+function withargs(name) {
+    var output = "good morning:" +name;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+}
+withargs('venkat');
+
+    // executing a function with less number of params
+
+
+    //executing a function with more number of params
+
+
+    //function overloading is not possible here
+
+
+    // functions with return values
+function withreturn(name) {
+    var output ="good morning " +name;
+    return output;
+}
+var greeting = withreturn('venkat');
+console.log(greeting);
+document.getElementById('display').innerHTML =greeting;
+
+
+    //function with empty return /no return
+
+    function emptyreturn(name) {
+        var output ="good morning " +name;
+
+    }
+    var greeting = emptyreturn('venkat');
+    console.log(greeting);
+    document.getElementById('display').innerHTML =greeting;
+
+    // function Expressions with name and execution
+var greetfn = function (greet) {
+    var output = "hello iam from expression";
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+}
+greetfn();
+
+    // Anonymous Function Expression and execution
+
+var greetan = function () {
+   var output = "iam from anonymus function expression";
+   console.log(output);
+   document.getElementById('display').innerHTML = output;
+}
+greetan();
+
+    // Functions as arguments without args
+function greet1() {
+    var output = "iam from greet1 function";
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+}
+    function greet2() {
+        var output = "iam from greet2 function";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+function greetEngine(fName) {
+    fName
+}
+greetEngine(greet1());
+
+
+    // Functions as arguments with args args
+
+
+    // Functions in Objects and Execution
+    var student = {
+        firstName : 'Arjun',
+        lastName : 'Reddy',
+        getFullName : function () {
+        return this.firstName +"" + this.lastName;
+    }
+    };
+var student_name = student.getFullName();
+console.log(student_name);
+
+
+    // this keyword for accessing objects props in function
+var employee ={
+    firstName :'john',
+    lastName : 'cena',
+    address :{
+        city: 'hyderabad',
+        state : 'telangana',
+        country: 'India'
+    },
+    isFromCity: function (city) {
+        return this.address.city === city;
+    }
+};
+
+var emp_city = employee.isFromCity('hyderabad');
+var output = "isFromCity Hyderabad ? :" +emp_city;
+console.log(output);
+document.getElementById('display').innerHTML = output;
+
+    // Coding Exercise 1
+    /*
+    Create an employee obj and address object in it. add a property called
+    isFromState() to return true if a person from that state.
+     */
+
+
+    // Default Function Arguments (arguments)
+
+
+</script>
+</html>

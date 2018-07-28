@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DataTypes</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>JS Data types Example</h2>
+<div>
+    <h1 id="display"></h1>
+</div>
+
+</body>
+
+<script>
+
+    // number example
+var a = 10;
+var output = "the type of a is:" +typeof a;
+console.log(output);
+document.getElementById('display').innerHTML=output;
+
+    // String Examples
+    var b = "venkat";
+    var output = "the type of a is:" +typeof b;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // boolean Examples
+var isjseasy = true;
+output = "the type of is jseasy is:" +typeof isjseasy;
+console.log(output);
+document.getElementById('display').innerHTML=output;
+
+    // reassignment example of variables
+var abc;
+abc =10;
+abc = true;
+abc= "venkat";
+abc= null;
+
+output = "the type of abc is:" +abc;
+console.log(output);
+document.getElementById('display').innerHTML = output;
+
+
+    // Undefined Example
+
+
+    // null example
+
+
+</script>
+
+</html>
